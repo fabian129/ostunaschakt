@@ -22,7 +22,7 @@ export function SiteHeader() {
                   src={ostunaLogo}
                   alt="Östuna Schakt logga"
                   priority
-                  className="h-9 w-auto md:h-10"
+                  className="h-10 w-auto md:h-11"
                 />
               </span>
             </Link>
