@@ -27,7 +27,7 @@ const services = [
 export function ServicesGrid() {
   return (
     <section id="tjanster" className="border-t border-border bg-background py-24 md:py-32">
-      <div className="container mx-auto px-4">
+      <div className="mx-auto max-w-7xl px-4">
         <div className="mx-auto mb-14 max-w-3xl text-center md:mb-20">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.14em] text-primary">Tjänster</p>
           <h2 className="mb-4 text-3xl font-bold tracking-tight md:text-4xl">Heltäckande markentreprenad</h2>

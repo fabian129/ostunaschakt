@@ -1,15 +1,16 @@
 ﻿import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
+import heroImage from "../../../assets/893ea67d-97df-480a-80c8-ee1e7f5f5cb1.jpeg";
 
 export function Hero() {
   return (
     <section
       id="start"
-      className="relative flex min-h-screen items-center justify-center overflow-hidden bg-background pt-28 md:pt-32"
+      className="relative flex w-full min-h-screen items-center justify-center overflow-hidden bg-background pt-28 md:pt-32"
     >
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/hero-bg.jpg"
+          src={heroImage}
           alt="Heavy Excavator Digging"
           fill
           priority
