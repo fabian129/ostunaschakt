@@ -1,4 +1,5 @@
-import { Truck, Shovel, Box, Layers } from "lucide-react";
+﻿import Link from "next/link";
+import { Truck, Shovel, Box, Layers, ArrowRight } from "lucide-react";
 
 const services = [
   {
@@ -33,19 +34,29 @@ export function ServicesGrid() {
           <p className="mx-auto max-w-xl text-muted-foreground">
             Lösningar för byggare, fastighetsägare och privatkunder i Uppsala och Stockholm.
           </p>
+
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {services.map((service, idx) => (
             <div
               key={idx}
-              className="group rounded-xl border border-border bg-secondary p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60"
+              className="group flex h-full flex-col rounded-xl border border-border bg-secondary p-8 transition-all duration-300 hover:-translate-y-1 hover:border-primary/60"
             >
               <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-xl bg-foreground text-primary transition-colors group-hover:bg-primary group-hover:text-white">
                 <service.icon className="h-6 w-6" />
               </div>
               <h3 className="mb-3 text-xl font-bold">{service.title}</h3>
               <p className="text-muted-foreground">{service.description}</p>
+              <div className="mt-auto pt-8">
+                <Link
+                  href="#kontakt"
+                  className="cta-beam inline-flex w-fit items-center gap-2 self-start rounded-xl border border-border bg-white px-4 py-2 text-sm font-semibold text-foreground transition-colors hover:bg-secondary"
+                >
+                  Läs mer
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </div>
             </div>
           ))}
         </div>

@@ -1,5 +1,7 @@
+﻿import Image from "next/image";
 import Link from "next/link";
 import { Phone } from "lucide-react";
+import ostunaLogo from "../../../assets/ostuna-schakt-logo-transparent.webp";
 
 const navItems = [
   { label: "Tjänster", href: "#tjanster" },
@@ -14,10 +16,14 @@ export function SiteHeader() {
       <div className="mx-auto max-w-6xl px-4 pt-4">
         <div className="header-shell header-border-beam rounded-xl border border-black/10 bg-white/92 backdrop-blur supports-[backdrop-filter]:bg-white/80">
           <div className="flex items-center justify-between px-4 py-3 md:px-6">
-            <Link href="#start" className="group inline-flex items-center gap-3">
-              <span className="h-2.5 w-2.5 bg-primary transition-transform duration-300 group-hover:scale-125" />
-              <span className="text-sm font-semibold uppercase tracking-[0.14em] text-foreground">
-                Östunaschakt
+            <Link href="#start" className="inline-flex items-center">
+              <span className="inline-flex h-11 items-center px-1">
+                <Image
+                  src={ostunaLogo}
+                  alt="Östuna Schakt logga"
+                  priority
+                  className="h-9 w-auto md:h-10"
+                />
               </span>
             </Link>
 
